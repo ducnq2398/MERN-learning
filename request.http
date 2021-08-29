@@ -1,0 +1,39 @@
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "DucNQ",
+    "password": "123"
+}
+
+###
+POST  http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTJiOTJhOWI2YjdmMjIwMjA5ZTg1YzIiLCJpYXQiOjE2MzAyNDc1ODF9.ui82c2vZ1DcZs4g7mYHalUpOwPfWqDDkQfg8lWQkD-I
+
+{
+    "title": "VueJS",
+    "description": "Learn VueJs",
+    "url" : "google.com",
+    "status": "LEARNING"
+}
+
+###
+GET   http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTJiOTJhOWI2YjdmMjIwMjA5ZTg1YzIiLCJpYXQiOjE2MzAyNDc1ODF9.ui82c2vZ1DcZs4g7mYHalUpOwPfWqDDkQfg8lWQkD-I
+
+###
+PUT   http://localhost:5000/api/posts/612b9877426ec5ee71fa3b33
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTJiOTJhOWI2YjdmMjIwMjA5ZTg1YzIiLCJpYXQiOjE2MzAyNDc1ODF9.ui82c2vZ1DcZs4g7mYHalUpOwPfWqDDkQfg8lWQkD-I
+
+{
+    "title": "Duc dep trai",
+    "description": "Learn VueJs",
+    "url" : "google.com/api/coaaa",
+    "status": "LEARNING"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/612b9877426ec5ee71fa3b33
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTJiOTJhOWI2YjdmMjIwMjA5ZTg1YzIiLCJpYXQiOjE2MzAyNDc1ODF9.ui82c2vZ1DcZs4g7mYHalUpOwPfWqDDkQfg8lWQkD-I
