@@ -1,5 +1,4 @@
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { lazy } from "react";
 import NotFound from "../components/NotFound/NotFound";
@@ -12,17 +11,29 @@ const routes = [
 ];
 function App() {
   return (
-    <div>
-      <Switch>
-        <Redirect exact from="/" to="/dashboard" />
-        {routes.map((route, idx) => (
-          <Route key={idx} path={route.path}>
-            <route.component />
-          </Route>
-        ))}
-        <Route component={NotFound} />
-      </Switch>
-      <ToastContainer newestOnTop draggable />
+    <div className="content-top">
+      <div>
+        <Switch>
+          <Redirect exact from="/" to="/dashboard" />
+          {routes.map((route, idx) => (
+            <Route key={idx} path={route.path}>
+              <route.component />
+            </Route>
+          ))}
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

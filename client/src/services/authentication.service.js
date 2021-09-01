@@ -1,34 +1,20 @@
 import { apiConfigs } from "../constants/api.config";
-import { authHeader } from "../helpers/auth.header";
-import { handleResponse } from "../helpers/handle.response";
+import { client } from "../helpers/auth.header";
 
 export const authenticationService = {
   getUserLoginInfo,
   login,
   logout,
 };
-
-function getUserLoginInfo() {
-  const requestOptions = {
-    method: "GET",
-    headers: authHeader.main(),
-  };
-  return fetch(
-    `${apiConfigs.REACT_APP_BASE_URL_API}/auth/login`,
-    requestOptions
-  )
-    .then(handleResponse)
-    .then((user) => {
-      // store current user login in local storage
-      localStorage.setItem("currentUser", JSON.stringify(user));
-      localStorage.setItem("token", JSON.stringify(user.token));
-      return user;
-    });
+const endpoint = "auth";
+function getUserLoginInfo(data) {
+  return client(null, `${endpoint}/login`, {
+    body: data,
+  });
 }
-
 function login() {
   logout();
-  window.location.href = "http://localhost:3000/login";
+  window.location.href = "http://localhost:3000";
 }
 
 function logout() {

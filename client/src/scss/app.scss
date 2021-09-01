@@ -6,10 +6,9 @@ body {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
-
-  ._desIcon {
-    margin: 150px auto;
+  display: flex;
+  .logo {
+    // margin: 150px;
   }
 
   h3 {
@@ -22,10 +21,11 @@ body {
 
   .login {
     width: 500px;
-    margin: 150px auto;
+    margin: 150px;
     background-color: #344667;
     border-radius: 8px;
     padding: 40px;
+    height: 450px;
   }
 
   .login-field {
@@ -80,5 +80,28 @@ body {
     text-align: center;
     color: #f2f7ff;
     font-family: "Poppins", sans-serif;
+  }
+  @media (max-width: 1028px) {
+    .bg {
+      display: block;
+    }
+    ._desIcon {
+      margin: auto;
+      display: block;
+    }
+    .login {
+      margin: 10px auto;
+    }
+  }
+  @media (max-width: 576px) {
+    .login {
+      margin: 20px auto;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1028px) {
+  .bg {
+    display: block;
   }
 }

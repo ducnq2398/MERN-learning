@@ -9,10 +9,16 @@ const authActions = {
   REGISTER_SUCCESS: "REGISTER_SUCCESS",
   REGISTER_FAILED: "REGISTER_FAILED",
 
-  login: (token = false) => ({
+  login: (payload) => ({
     type: authActions.LOGIN,
-    token,
+    payload: payload,
   }),
+
+  loginSuccess: (result) => ({
+    type: authActions.LOGIN_SUCCESS,
+    payload: result,
+  }),
+
   logout: () => ({
     type: authActions.LOGOUT,
   }),

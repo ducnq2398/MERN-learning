@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { userHelper } from "../helpers";
 export const AuthContext = createContext();
 
@@ -15,6 +15,9 @@ const AuthProvider = (props) => {
     localStorage.setItem("token", JSON.stringify(token));
     setLoggedIn(true);
   };
+  useEffect(() => {
+    setLoggedIn(isValidToken);
+  }, []);
 
   return (
     <AuthContext.Provider value={{ loggedIn, signIn }}>

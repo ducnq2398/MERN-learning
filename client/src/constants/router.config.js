@@ -1,9 +1,8 @@
 export const PUBLIC_ROUTE = {
-    LANDING: "/",
-    LOGIN: "/login",
-    REGISTER: "/register",
+  LANDING: "/",
+  REGISTER: "/register",
 };
 
 export const PRIVATE_ROUTE = {
-    DASHBOARD: "/dashboard",
+  DASHBOARD: "/dashboard",
 };
