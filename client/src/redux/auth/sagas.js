@@ -3,6 +3,7 @@ import { userHelper } from "../../helpers";
 import actions from "./actions";
 import { authenticationService } from "../../services";
 import { showLoading, hideLoading } from "react-redux-loading-bar";
+import { push } from "react-router-redux";
 
 function* login({ payload }) {
   yield put(showLoading());
@@ -10,7 +11,9 @@ function* login({ payload }) {
     const result = yield call(authenticationService.getUserLoginInfo, payload);
     if (result.success === true) {
       yield delay(1000);
-      yield put(actions.loginSuccess(result.accessToken));
+      window.location.assign("/dashboard");
+      localStorage.setItem("token", result.accessToken);
+      localStorage.setItem("loggedIn", true);
       userHelper.showSuccessMessage("Login successfully");
       yield put(hideLoading());
     }

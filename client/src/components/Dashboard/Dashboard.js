@@ -1,5 +1,10 @@
 import React from "react";
+import Sidebar from "../Sidebar/Sidebar";
 
 export default function Dashboard() {
-  return <div>Login successfully</div>;
+  return (
+    <div>
+      <Sidebar />
+    </div>
+  );
 }
