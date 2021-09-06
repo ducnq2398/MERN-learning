@@ -31,7 +31,6 @@ body {
     background-color: #344667;
     border-radius: 8px;
     padding: 40px;
-    height: 450px;
   }
 
   .login-field {
@@ -112,128 +111,122 @@ body {
   }
 }
 
-//Sidebar css
-.sidebar {
+.dashboard_content {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 240px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 576px) {
+  .dashboard_content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 250px;
+  }
+}
+
+//Sidebar css
+
+nav {
   background: #344667;
-  padding: 6px 14px;
+  height: 80px;
+  width: 100%;
 
-  .profile_content {
-    position: absolute;
+  .checkbtn {
+    font-size: 30px;
     color: #f2f7ff;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-
-    .profile {
-      position: relative;
-      padding: 10px 6px;
-      height: 60px;
-
-      .profile_details {
-        display: flex;
-        align-items: center;
-
-        img {
-          height: 45px;
-          width: 45px;
-          object-fit: cover;
-          border-radius: 12px;
-        }
-
-        .name_job {
-          margin-left: 10px;
-        }
-        .name {
-          font-size: 15px;
-          font: 400;
-        }
-        .job {
-          font-size: 12px;
-        }
-      }
-
-      #log_out {
-        position: absolute;
-        left: 88%;
-        bottom: 5px;
-        transform: translateX(-50%);
-        min-width: 50px;
-        line-height: 50px;
-        font-size: 20px;
-        border-radius: 12px;
-      }
-    }
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
   }
 
-  .logo {
-    color: #f2f7ff;
-    display: flex;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-
-    i {
-      font-size: 28px;
-      margin-right: 5px;
-    }
-
-    .logo_name {
-      font-size: 20px;
-      font-weight: 400;
-    }
+  #check {
+    display: none;
   }
-  #btn {
-    position: absolute;
+
+  label.nav_logo {
     color: #f2f7ff;
-    left: 90%;
-    top: 6px;
-    font-size: 20px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    transform: translateX(-50%);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   ul {
-    margin-top: 20px;
+    float: right;
+    margin-right: 20px;
 
     li {
-      position: relative;
-      height: 50px;
-      width: 100%;
-
-      list-style: none;
-      line-height: 50px;
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
 
       .nav_link {
         color: #f2f7ff;
-        display: flex;
-        align-items: center;
+        font-size: 17px;
+        text-transform: uppercase;
         text-decoration: none;
-        border-radius: 16px;
-        i {
-          height: 50px;
-          min-width: 50px;
-          border-radius: 12px;
-          line-height: 50px;
+        padding: 7px 13px;
+        border-radius: 3px;
+      }
+
+      .nav_link.active,
+      .nav_link:hover {
+        background: #f2f7ff;
+        transition: 0.5s;
+        color: #344667;
+      }
+    }
+  }
+
+  @media (max-width: 952px) {
+    label.nav_logo {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+
+    .nav_link {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #4c638f;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+      z-index: 10000;
+
+      li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+        .nav_link {
+          font-size: 20px;
         }
       }
-
-      .nav_link:hover {
-        color: #344667;
-        background: #f2f7ff;
-      }
-
-      .active {
-        color: #344667;
-        background: #f2f7ff;
-      }
+    }
+    #check:checked ~ ul {
+      left: 0;
     }
   }
 }

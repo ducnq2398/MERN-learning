@@ -1,10 +1,14 @@
 import React from "react";
-import Sidebar from "../Sidebar/Sidebar";
+import dashboardImg from "../../assets/img/dashboard.jpg";
 
 export default function Dashboard() {
   return (
     <div>
-      <Sidebar />
+      <img
+        className="dashboard_content"
+        src={dashboardImg}
+        alt="dashboard logo"
+      />
     </div>
   );
 }

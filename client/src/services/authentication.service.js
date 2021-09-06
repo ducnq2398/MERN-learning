@@ -1,11 +1,10 @@
-import { apiConfigs } from "../constants/api.config";
 import { client } from "../helpers/auth.header";
 
 export const authenticationService = {
   getUserLoginInfo,
   login,
   logout,
-  register
+  register,
 };
 const endpoint = "auth";
 function getUserLoginInfo(data) {
@@ -21,12 +20,12 @@ function login() {
 function logout() {
   // remove all item local storage to log user out
   localStorage.clear();
-  window.location.href = `${apiConfigs.REACT_APP_BASE_URL_API}/auth/logout`;
+  window.location.href = "http://localhost:3000";
 }
 
-function register(data){
+function register(data) {
   return client(null, `${endpoint}/register`, {
-    method: 'POST',
-    body: data
-  })
+    method: "POST",
+    body: data,
+  });
 }

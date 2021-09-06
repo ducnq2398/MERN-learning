@@ -66,7 +66,12 @@ router.post("/login", async (req, res) => {
       { userId: user._id },
       process.env.ACCESS_TOKEN
     );
-    res.json({ success: true, message: "Login successfully", accessToken });
+    res.json({
+      success: true,
+      message: "Login successfully",
+      accessToken,
+      user: user,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, message: "Internal Server Error" });

@@ -2,6 +2,7 @@ import { ToastContainer } from "react-toastify";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { lazy } from "react";
 import NotFound from "../components/NotFound/NotFound";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const routes = [
   {
@@ -12,6 +13,7 @@ const routes = [
 function App() {
   return (
     <div className="content-top">
+      <Sidebar />
       <div>
         <Switch>
           <Redirect exact from="/" to="/dashboard" />
