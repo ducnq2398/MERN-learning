@@ -15,7 +15,7 @@ export default function Sidebar() {
       <label htmlFor="check" className="checkbtn">
         <i className="fas fa-bars"></i>
       </label>
-      <label className="nav_logo">Hello {user.username}</label>
+      <label className="nav_logo">Hello {user?.username}</label>
       <ul>
         <li>
           <NavLink className="nav_link" to="/dashboard">

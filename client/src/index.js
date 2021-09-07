@@ -7,6 +7,7 @@ import AuthProvider from "./app/AuthProvider";
 import LoadingBar from "react-redux-loading-bar";
 import { Provider } from "react-redux";
 import "./scss/app.scss";
+import 'antd/dist/antd.css';
 import { store } from "./redux/store";
 
 import PublicRouters from "./app/router";

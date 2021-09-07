@@ -22,8 +22,7 @@ export default function Register() {
     };
     await authenticationService
       .register(body)
-      .then((result) => {
-        console.log(result);
+      .then(() => {
         history.push("/");
       })
       .catch((error) => {

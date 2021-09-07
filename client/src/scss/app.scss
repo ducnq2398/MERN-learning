@@ -31,6 +31,7 @@ body {
     background-color: #344667;
     border-radius: 8px;
     padding: 40px;
+    height: 500px;
   }
 
   .login-field {
@@ -154,9 +155,9 @@ nav {
 
   label.nav_logo {
     color: #f2f7ff;
-    font-size: 35px;
+    font-size: 20px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0 10px;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -190,8 +191,8 @@ nav {
 
   @media (max-width: 952px) {
     label.nav_logo {
-      font-size: 30px;
-      padding-left: 50px;
+      font-size: 20px;
+      padding-left: 10px;
     }
 
     .nav_link {
@@ -229,4 +230,10 @@ nav {
       left: 0;
     }
   }
+}
+
+.post_add{
+  margin: 10px 10px;
+  position: absolute;
+  right: 0;
 }
