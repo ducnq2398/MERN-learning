@@ -38,7 +38,7 @@ function Routes() {
                 <route.component />
               </Route>
             ))}
-            <PrivateRoute path="/dashboard">
+            <PrivateRoute>
               <App />
             </PrivateRoute>
           </Switch>

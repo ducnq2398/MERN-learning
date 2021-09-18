@@ -9,6 +9,10 @@ const routes = [
     path: "/dashboard",
     component: lazy(() => import("../components/Dashboard/Dashboard")),
   },
+  {
+    path: "/posts",
+    component: lazy(() => import("../components/Posts/Posts")),
+  },
 ];
 function App() {
   return (

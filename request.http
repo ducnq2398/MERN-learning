@@ -1,4 +1,4 @@
-POST http://localhost:5000/api/auth/register
+POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTJiO
 
 ###
 GET   http://localhost:5000/api/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTJiOTJhOWI2YjdmMjIwMjA5ZTg1YzIiLCJpYXQiOjE2MzAyNDc1ODF9.ui82c2vZ1DcZs4g7mYHalUpOwPfWqDDkQfg8lWQkD-I
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ1NTBkNTI4YzliZmRhNzRjZjVkNDIiLCJpYXQiOjE2MzE5MzI5ODB9.1gPkBiZYVgZzT_GweyVPzxQzR3jHw7ffOQDwoL6HGTY
 
 ###
 PUT   http://localhost:5000/api/posts/612b9877426ec5ee71fa3b33

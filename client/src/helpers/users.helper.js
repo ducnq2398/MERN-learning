@@ -12,7 +12,7 @@ export const userHelper = {
 function getTokenFromStorage() {
   let token = null;
   try {
-    token = JSON.parse(localStorage.getItem("token"));
+    token = localStorage.getItem("token");
     return token;
   } catch (error) {
     return null;
